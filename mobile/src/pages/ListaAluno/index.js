@@ -45,9 +45,9 @@ export default function ListaALuno({ route, navigation }) {
                             <Checkbox style={styles.checkbox} value={isChecked} onValueChange={setChecked} />
                             <Text style={styles.paragraph}>{item.aluno.nome}</Text>
                         </View>
-                    )
+                    );
                 }}
             />
         </View>
     );
-}
+};
