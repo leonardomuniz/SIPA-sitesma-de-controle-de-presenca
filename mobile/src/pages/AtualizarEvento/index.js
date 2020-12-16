@@ -26,7 +26,7 @@ export default function CadastrarEventoScreen({route, navigation }) {
           <TextInput style={styles.inputTexto} placeholder={route.params?.descricao} value={descricao} onChangeText={setDescricao} />        
         </View>
 
-        <TouchableOpacity style={styles.botao} onPress={()=> console.log("Estamos trabalhando para melhor te atender")} >
+        <TouchableOpacity style={styles.botao} onPress={()=> navigation.navigate('Lista de alunos')}  >
           <Text style={styles.botaoTexto}>Alunos</Text>        
         </TouchableOpacity>
 

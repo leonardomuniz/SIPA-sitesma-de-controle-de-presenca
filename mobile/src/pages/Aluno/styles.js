@@ -19,17 +19,19 @@ export default StyleSheet.create({
     },  
   
     botao: {
-      backgroundColor: "blue",
+      backgroundColor: "#1565C0",
       justifyContent:'center',
       marginTop:10,
       marginBottom:10,
-      padding: 20,
+      padding: 15,
       borderRadius: 5,
-      width: '70%'
+      width: '50%'
     },
     botaoTexto: {
         fontSize: 20,
         color: '#fff',
+        fontWeight: "bold",
+        textTransform: "uppercase",
     }, 
     card: {
       backgroundColor: "white",

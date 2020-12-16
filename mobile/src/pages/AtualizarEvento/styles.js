@@ -15,17 +15,19 @@ export default StyleSheet.create({
       marginTop: 10,
     },      
   
-    botao: {
-      backgroundColor: "blue",
+    botao: {      
+      backgroundColor: "#1565C0",
       marginTop:15,
       marginBottom:10,
-      padding: 20,
+      padding: 10,
       borderRadius: 5,
     },
 
     botaoTexto: {
       fontSize: 20,
       color: '#fff',
+      fontWeight: "bold",
+      textTransform: "uppercase",
     }, 
     inputTexto:{
       height: 50, 

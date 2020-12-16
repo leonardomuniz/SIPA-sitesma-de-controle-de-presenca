@@ -18,11 +18,11 @@ export default StyleSheet.create({
       textAlign:"center"
     },  
     botao: {
-      backgroundColor: "blue",
+      backgroundColor: "#1565C0",
       justifyContent:"center",
       marginTop:10,
       marginBottom:10,
-      padding: 20,
+      padding: 15,
       borderRadius: 5,
       width: "50%"
     },

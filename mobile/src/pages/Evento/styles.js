@@ -12,15 +12,17 @@ export default StyleSheet.create({
         alignItems: "center",
     },
     botao: {
-      backgroundColor: "blue",
+      backgroundColor: "#1565C0",
       marginTop:15,
       marginBottom:10,
-      padding: 20,
+      padding: 15,
       borderRadius: 5,
     },
     botaoTexto: {
       fontSize: 20,
       color: '#fff',
+      fontWeight: "bold",
+      textTransform: "uppercase",
     }, 
     texto:{
         fontSize:17.5,  

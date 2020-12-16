@@ -14,7 +14,9 @@ import Relatorio from './src/pages/Relatorio/index';
 import ListaAluno from './src/pages/ListaAluno/index';
 
 const Stack = createStackNavigator();
-
+const padrao = {
+  
+}
 
 
  
@@ -22,16 +24,97 @@ const Stack = createStackNavigator();
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Login">
-        <Stack.Screen name="Evento professor" component={EventoProfessorScreen} />
-        <Stack.Screen name="Cadastrar evento" component={CadastrarEventoScreen} />
-        <Stack.Screen name="Atualizar evento" component={AtualizarEventoScreen} />
-        <Stack.Screen name="Professor" component={ProfessorScreen} />
-        <Stack.Screen name="Evento" component={EventoScreen}/>
-        <Stack.Screen name="Login" component={LoginScreen} />
-        <Stack.Screen name="Aluno" component={AlunoScreen}/>
-        <Stack.Screen name="Relatorio" component={Relatorio}/>
-        <Stack.Screen name="Lista de alunos" component={ListaAluno}/>
+      <Stack.Navigator initialRouteName="Login" >
+        <Stack.Screen name="Evento professor" component={EventoProfessorScreen}options={{
+          ttile:"Informações Evento",
+          headerStyle: {
+            backgroundColor: '#1565C0',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }} />
+        <Stack.Screen name="Cadastrar evento" component={CadastrarEventoScreen} options={{
+          title: 'Cadastrar novo evento !',
+          headerStyle: {
+            backgroundColor: '#1565C0',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }} />
+        <Stack.Screen name="Atualizar evento" component={AtualizarEventoScreen} options={{
+          title: 'Atualizar evento',
+          headerStyle: {
+            backgroundColor: '#1565C0',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }} />
+        <Stack.Screen name="Professor" component={ProfessorScreen} options={{
+          title: 'Painel professor(a)',
+          headerStyle: {
+            backgroundColor: '#1565C0',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }}/>
+        <Stack.Screen name="Evento" component={EventoScreen} options={{
+          title: 'Dados do evento: ',
+          headerStyle: {
+            backgroundColor: '#1565C0',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }}/>
+        <Stack.Screen name="Login" component={LoginScreen} options={{
+          title: 'Seja Bem-vindo(a) !',
+          headerStyle: {
+            backgroundColor: '#1565C0',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }} />
+        <Stack.Screen name="Aluno" component={AlunoScreen} options={{
+          title: 'Painel aluno(a)',
+          headerStyle: {
+            backgroundColor: '#1565C0',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }}/>
+        <Stack.Screen name="Relatorio" component={Relatorio} options={{
+          title: 'Relatório do evento: ',
+          headerStyle: {
+            backgroundColor: '#1565C0',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }} />
+        <Stack.Screen name="Lista de alunos" component={ListaAluno} options={{
+          title: 'Lista de alunos: ',
+          headerStyle: {
+            backgroundColor: '#1565C0',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }} />
       </Stack.Navigator>
     </NavigationContainer>
   );

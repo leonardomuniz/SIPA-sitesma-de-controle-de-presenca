@@ -54,7 +54,7 @@ export default function ProfessorScreen({route, navigation }) {
         <TouchableOpacity style={styles.card} key={evento._id} onPress={
           () => navigation.navigate('Evento professor', {
               id            : evento._id,
-              nome          : evento.nome,
+              nome          : evento.nome, 
               data          : evento.data,
               descricao     : evento.descricao,
               latitude      : evento.localizacao.latitude,

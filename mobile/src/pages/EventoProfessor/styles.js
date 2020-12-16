@@ -15,23 +15,25 @@ export default StyleSheet.create({
         flexDirection:"row",
     },
     botao: {
-      backgroundColor: "blue",
+      backgroundColor: "#1565C0",
       marginTop:15,
       marginBottom:10,
-      padding: 20,
+      padding: 15,
       borderRadius: 5,
     },
     botaoSeparado: {
-      backgroundColor: "blue",
+      backgroundColor: "#1565C0",
       marginTop:15,
       marginBottom:10,
       marginRight:15,
-      padding: 20,
+      padding: 15,
       borderRadius: 5,
     },
     botaoTexto: {
       fontSize: 20,
       color: '#fff',
+      textTransform:"uppercase",
+      fontWeight:"bold"
     }, 
     texto:{
       fontSize:17.5,

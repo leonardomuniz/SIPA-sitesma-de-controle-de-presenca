@@ -10,17 +10,18 @@ export default StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         alignContent: "center",
-        marginTop: 200
+        marginTop: 50
     },
     botao: {
-      backgroundColor: "blue",
+      backgroundColor: "#1565C0",
       marginTop:15,
       marginBottom:10,
-      padding: 20,
+      padding: 15,
       borderRadius: 5,
     },
     botaoTexto: {
       fontSize: 20,
+      textTransform:"uppercase",
       color: "#fff",
     }, 
     erroText:{
@@ -38,6 +39,15 @@ export default StyleSheet.create({
         borderWidth:0.5,
         borderColor:"#9e9e9e",
         backgroundColor: "white",
+    },
+    stretch: {
+      width: 150,
+      height: 150,
+      marginBottom:15
+    },
+    titulo:{
+      fontSize:50,
+      fontWeight: "bold",
+      marginBottom:15      
     }
-
   });
