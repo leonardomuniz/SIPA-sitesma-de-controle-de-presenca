@@ -36,19 +36,15 @@ module.exports = {
 
     async atualizar(req, res) {
         try {
-            const { _id } = req.params;
 
-            const evento_existe = await Evento.findOne({ _id });
+                const evento = await Evento.findByIdAndUpdate({ _id: req.params._id },  req.body );
 
-            if (!evento_existe) {
-                return res.json({ message: "Este evento ainda não foi cadastrado" });
-            } else {
-                const evento = await Evento.findByIdAndUpdate({ _id: req.params._id }, { $push: req.body }, { runValidators: true });
-
+                console.log(evento)
                 return res.json(evento);
-            };
+         
 
         } catch (erro) {
+            console.log(erro)
             return res.json({ erro: erro.message });
         };
     },

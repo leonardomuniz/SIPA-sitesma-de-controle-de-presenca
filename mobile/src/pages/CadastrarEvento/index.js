@@ -5,7 +5,7 @@ import MapView, {Marker} from 'react-native-maps';
 
 import styles from './styles';
 
-export default function CadastrarEventoScreen({navigation }) {
+export default function CadastrarEventoScreen({navigation, route }) {
   const [ nomeEvento, setnomeEvento ] = useState(String);
   const [ dataEvento, setDataEvento ] = useState(String);
   const [ descricao, setDescricao ] = useState(String);
@@ -26,10 +26,10 @@ export default function CadastrarEventoScreen({navigation }) {
     await api.post('evento/cadastrar',{
       nome:nomeEvento,
       data:dataEvento,
-      professor:id,
+      professor:route.params?.id,
       descricao: descricao,
       localizacao: regiao,
-      alunos: alunosPresente
+      alunos: route.params?.alunosInfos 
     },{
       validateStatus: function (status) {
 

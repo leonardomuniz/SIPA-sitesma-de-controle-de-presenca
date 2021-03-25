@@ -9,6 +9,7 @@ export default function ProfessorScreen({route, navigation }) {
   const [ listaEvento, setListaEvento ] = useState();
   const [ eventos, setEventos] = useState(Object);
   const [ nome, setNome] = useState('');
+  const [ idProfessor, setId] = useState('');
 
   useEffect(()=>{
     async function carregarDados(){
@@ -16,6 +17,7 @@ export default function ProfessorScreen({route, navigation }) {
       const dados = JSON.parse( await AsyncStorage.getItem('dados_usuario'));
 
       setNome(dados.dados.nome);
+      setId(dados.dados._id);
       
       await api.get(`professor/${dados.dados._id}/eventos`).then(async (res)=>{
         await AsyncStorage.setItem('dados_evento', JSON.stringify(res.data));
@@ -79,7 +81,7 @@ export default function ProfessorScreen({route, navigation }) {
 
         <Text style={styles.texto}>Bem-vindo Professor(a) <Text style={{fontWeight:"bold"}}>{nome}</Text></Text>
         
-        <TouchableOpacity style={styles.botao} onPress={()=> navigation.navigate('Cadastrar evento')}>
+        <TouchableOpacity style={styles.botao} onPress={()=> navigation.navigate('Cadastrar evento', {id:idProfessor})}>
           <Text style={styles.botaoTexto}>Criar Evento</Text>
         </TouchableOpacity>
         

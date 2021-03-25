@@ -6,9 +6,9 @@ import styles from './styles';
 
 export default function CadastrarEventoScreen({route, navigation }) {
   const [ atualizaAluno, setAtualizaAluno] = useState();
-  const [ descricao, setDescricao] = useState();
-  const [ nome, setNome ] = useState();
-  const [ data, setData ] = useState();
+  const [ descricao_evento, setDescricao] = useState();
+  const [ nome_evento, setNome ] = useState();
+  const [ data_evento, setData ] = useState();
   const [ regiao, setRegiao ] = useState({
     latitude      : route.params?.latitude,
     longitude     : route.params?.longitude,
@@ -17,13 +17,36 @@ export default function CadastrarEventoScreen({route, navigation }) {
   }); 
 
 
+  async function atualizar(){
+    await api.put(`evento/atualizar/${route.params?.id}`,{
+      nome:nome_evento,
+      data:data_evento,
+      descricao: descricao_evento,
+      localizacao: regiao
+    },{
+      validateStatus: function (status) {
+
+        return status < 500; // Resolve only if the status code is less than 500
+      }
+    }).then(async (res) => {
+      //console.log(res)
+     
+      if(res.status == 200){
+        navigation.navigate('Professor')
+      } else {
+        setErro('Erro ao cadastrar evento')
+      }
+
+    });    
+  }
+
   return (
     <ScrollView style={styles.corpo}>
       <View style={styles.container}>
         <View style={styles.formulario}>
-          <TextInput style={styles.inputTexto} placeholder={route.params?.nome} value={nome} onChangeText={setData}/>
-          <TextInput style={styles.inputTexto} placeholder={route.params?.data} value={data} onChangeText={setNome} />
-          <TextInput style={styles.inputTexto} placeholder={route.params?.descricao} value={descricao} onChangeText={setDescricao} />        
+          <TextInput style={styles.inputTexto} placeholder={route.params?.nome} value={nome_evento} onChangeText={setNome}/>
+          <TextInput style={styles.inputTexto} placeholder={route.params?.data} value={data_evento} onChangeText={setData} />
+          <TextInput style={styles.inputTexto} placeholder={route.params?.descricao} value={descricao_evento} onChangeText={setDescricao} />        
         </View>
 
         <TouchableOpacity style={styles.botao} onPress={()=> navigation.navigate('Lista de alunos')}  >
@@ -44,7 +67,7 @@ export default function CadastrarEventoScreen({route, navigation }) {
           />
         </MapView>
 
-        <TouchableOpacity style={styles.botao} onPress={() => cadastrar()}>
+        <TouchableOpacity style={styles.botao} onPress={() => atualizar()}>
           <Text style={styles.botaoTexto}>Atualizar</Text>        
         </TouchableOpacity>
 

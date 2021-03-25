@@ -20,6 +20,7 @@ export default function LoginScreen({ navigation }) {
         await AsyncStorage.setItem('dados_usuario', JSON.stringify(res.data))
 
         const dados_usuario = await AsyncStorage.getItem('dados_usuario')
+
         if (matricula.length == 6) {
           navigation.navigate('Professor');
         } else if (matricula.length == 4) {
