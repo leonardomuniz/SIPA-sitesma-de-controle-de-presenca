@@ -6,7 +6,6 @@ const router = require('./routes');
 
 const app = express();
 
-global.SALT_KEY = 'f5b99242-6504-4ca3-90f2-05e78e5761ef';
 mongoose.connect('mongodb+srv://leo:leo@cluster0.2kwu3.mongodb.net/tcc?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
