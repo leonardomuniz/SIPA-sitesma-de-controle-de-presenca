@@ -2,22 +2,23 @@
   <img alt="Logo" src="./mobile/assets/owl.png" width="200px">
 </h1>
 
-<p align="center">O seu app de bolso para a produtividade!</p>
+<p align="center">Um app de controle de presença estudantil em evento!</p>
+<p align="center">🚧 projeto em andamento 🚧</p>
 
 <br>
 <div align="center" >
-  <img src="./assets/foco.jpeg"height="275">
-  <img src="./assets/descanço.jpeg"height="275">
-  <img src="./assets/listodos.jpeg"height="275">
-  <img src="./assets/settings.jpeg"height="275">
+  <img src="./assets/cadastro.png"height="315">
+  <img src="./assets/login.png"height="315">
+  <img src="./assets/painel.png"height="315">
 </div>
 <br>
 
 ## 📄 **Sobre este projeto**
 
-Este aplicativo é feito para que você que gosta de estudar, trabalhar ou fazer qualquer atividade com o auxílio dá técnica de pomodoro assim como eu.
+Este um sistema que foi o tema central do meu TCC na faculdade de sistemas para a internet, tendo este aplicativo sua principal função ser um sistema na qual professores podem fazer o controle de presença de alunos de uma forma mais fácil sem precisar parar em algum ponto do evento para reunir sua turma
 
-O stopwatch foi feito e desenvolvido para ser um aplicativo simples e escalável, é muito comum ter sites ou até mesmo aplicativos de pomodoro mas todos sempre falta algo que tem em outro, então para todos os desenvolvedores que quiserem mecher no stopwatch e adicionar funcionalidades sejam completamente bem-vindos.
+Também um ponto importante é que ele é completamente modular, conseguindo se moldar a qualquer instituição de ensino com algumas leves alterações no banco de dados.
+
 
 <br>
 
@@ -25,10 +26,10 @@ O stopwatch foi feito e desenvolvido para ser um aplicativo simples e escalável
 <br>
 
 ## 🤹‍♀️ Funcionalidades
-- Cronometro regressivo
-- modo escuro e light
-- metodologia pomodoro embutida
-- sistema de to dos
+- Sistema de login
+- implementação de mapas
+- cadastro de novos eventos
+- localização geografica
 
 
 <br>
@@ -40,21 +41,31 @@ O stopwatch foi feito e desenvolvido para ser um aplicativo simples e escalável
 - [Prettier](https://prettier.io/)
 - [expo](https://docs.expo.dev/)
 - [react-navigation](https://reactnavigation.org/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [TypeORM](https://typeorm.io/#/)
+- [cors](https://www.npmjs.com/package/cors)
+- [express](https://expressjs.com/pt-br/)
+- [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken)
+- [mongoose](https://mongoosejs.com/)
+- [async-storage](https://react-native-async-storage.github.io/async-storage/docs/usage/)
+- [geolocation](https://github.com/react-native-geolocation/react-native-geolocation)
 
 
 <br>
 
 ## 🔨 Configuração
 
-1- Para instalar as dependências:
+1- Para instalar as dependências do back-end:
 > yarn
 
 2- Para iniciar a aplicação:
 > yarn start
 
-3- Para poder gerar um apk:
+3- Para instalar as dependências do mobile:
+> yarn
+
+4- Para iniciar a aplicação:
+> yarn start
+
+5- Para poder gerar um apk:
 > expo build:android
 
 ---
