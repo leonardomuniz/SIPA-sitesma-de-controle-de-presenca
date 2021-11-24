@@ -26,7 +26,7 @@ function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Login" >
         <Stack.Screen name="Evento professor" component={EventoProfessorScreen}options={{
-          ttile:"Informações Evento",
+          tile:"Informações Evento",
           headerStyle: {
             backgroundColor: '#1565C0',
           },
